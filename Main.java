@@ -10,6 +10,11 @@ public class Main extends AnimalShelter {
 		Scanner s = new Scanner(System.in);
 		AnimalShelter as = new AnimalShelter();
 		
+		//take command line argument as parameter
+		for (String parameter: args){
+			as.addAnimal(parameter);
+		}
+		
 		while(true){
 			System.out.println(" 1: Add new animal \n 2: Adopt an animal \n 3: Adopt a cat \n 4: Adopt a dog \n 5: Show animals in the shelter \n 6: Show cats in the shelter \n 7: Show dogs in the shelter \n 0: Exit \n Enter a number:");
 			int i = s.nextInt();

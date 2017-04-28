@@ -48,6 +48,28 @@ public class AnimalShelter extends Animal {
 		}
 	}
 	
+	public void addAnimal(String i){
+		switch(i.charAt(0)){
+			case 'C':
+				Cat c = new Cat();
+				c.setNumber(x.size()+1);
+				c.setName(i);
+				c.cry();
+				x.add(c);
+				break;
+			case 'D':
+				Dog d = new Dog();
+				d.setNumber(x.size()+1);
+				d.setName(i);
+				d.cry();
+				x.add(d);
+				break;
+			default: 
+					System.out.println("Try again!");
+					break;
+		}
+	}
+	
 	public void adopt(){
 		System.out.println("			Congrats!! You have adopted "+x.get(0).getName());
 		x.remove(0);
